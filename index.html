@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>号码百事通下载</title>
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+</head>
+
+<body>
+    <!--导航栏-->
+    <div class="navbar">
+        <div class="nav">
+            <div class="back">
+                <img src="img/back.png" alt="" class="img-responsive">
+            </div>
+            <h3>号码识别设置</h3>
+        </div>
+    </div>
+    <!--内容区-->
+    <div class="content">
+        <div class="img">
+            <img src="img/bg_gengxin@2x.png" alt="">
+        </div>
+        <div class="read">
+            <h1 class="ing">0%</h1>
+            <h2 class="dot">正在下载号码识别基础数据包...</h2>
+        </div>
+        <!--进度条-->
+        <div class="cont">
+            <div class="loading">
+                <div class="load"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript">
+        // 下载
+        var i = 0;
+        var ms = 6000;
+
+        var time = setInterval(function() {
+            $(".load").css("width", i + "%");
+            i = i + (1000 / ms);
+            $(".ing").text(Math.round(i) + "%");
+            // for (let j = 1; j <= 3; j++) {
+            //     if (j = 1) {
+            //         $(".dot").text("正在下载号码识别基础数据包" + ".")
+            //     }
+            // }
+            if (i > 100) {
+                $(".ing").text("100%");
+                setTimeout(function() {
+                    window.location.href = "index2.html"
+                }, 200);
+                clearInterval(time);
+            }
+        }, 10);
+    </script>
+</body>
+
+</html>

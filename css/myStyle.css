@@ -1,0 +1,210 @@
+/*导航*/
+
+.navbar {
+    width: 100%;
+    background: #f7f7f7;
+    text-align: center;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 0.480rem;
+}
+
+.back {
+    width: 9%;
+    height: 100%;
+    align-self: center;
+    padding-left: 0.420rem;
+}
+
+.nav h3 {
+    font-size: 0.85rem;
+    margin-left: 25%;
+}
+
+.nav h1 {
+    font-size: 0.85rem;
+}
+
+
+/*内容区*/
+
+.content {
+    width: 100%;
+    margin-bottom: 1.736rem;
+}
+
+.content .img {
+    padding: 2.6087rem 0rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*进度条*/
+
+.read {
+    text-align: center;
+}
+
+.read h1 {
+    font-size: 1.087rem;
+    color: #222222;
+    margin-bottom: 0.8696rem;
+}
+
+.read h2 {
+    font-size: 0.8696rem;
+    color: #858585;
+}
+
+.cont {
+    width: 100%;
+    display: flex;
+}
+
+.loading {
+    background: #ecf0f3;
+    width: 80%;
+    height: 0.8696rem;
+    margin: 0 auto;
+    margin-top: 1.7391rem;
+    border-radius: 0.8696rem;
+    position: relative;
+}
+
+.load {
+    background: #7ed321;
+    width: 0%;
+    height: 0.8696rem;
+    margin: 0 auto;
+    border-radius: 0.8696rem;
+    position: absolute;
+    top: 0;
+}
+
+
+/*号码百事通更新页*/
+
+.bg {
+    background: #1199ff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg img {
+    width: 60%;
+    align-self: center;
+    margin: 2.1739rem;
+}
+
+.check {
+    width: 60%;
+    height: 2.1rem;
+    border-radius: 1rem;
+    background: #1987f7;
+    align-self: center;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.4348rem;
+}
+
+.day {
+    color: #8fccff;
+    margin: 0.8696rem;
+}
+
+.items {
+    width: 100%;
+    border-bottom: 0.0435rem solid #dcdcdc;
+}
+
+.itemCont {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.480rem auto;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.itemImg {
+    margin-right: 0.8696rem;
+}
+
+.item img {
+    width: 1.3913rem;
+}
+
+.item h1 {
+    font-size: 0.8696rem;
+    align-self: center;
+}
+
+.item .new {
+    font-size: 0.7826rem;
+    text-align: center;
+    width: 2.6087rem;
+    height: 1.2174rem;
+    color: #ef4e4e;
+    border: 1px solid #ef4e4e;
+    border-radius: 1rem;
+    margin-right: 0.8696rem;
+}
+
+.next {
+    width: 0.960rem;
+    height: 0.960rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    box-shadow: #ccc 0rem 0rem 0rem 0.048rem;
+    width: 1.920rem;
+    height: 0.960rem;
+    display: inline-block;
+    border-radius: 0.960rem;
+    position: relative;
+    background-color: #bdbdbd;
+    overflow: hidden;
+}
+
+label:before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    width: 0.960rem;
+    height: 0.960rem;
+    display: inline-block;
+    border-radius: 0.960rem;
+    background-color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+input:checked+label:before {
+    left: 0.960rem;
+}
+
+input:checked+label {
+    background-color: #51ccee;
+}
