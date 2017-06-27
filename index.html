@@ -27,7 +27,7 @@
         </div>
         <div class="read">
             <h1 class="ing">0%</h1>
-            <h2 class="dot">正在下载号码识别基础数据包...</h2>
+            <h2>正在下载号码识别基础数据包<i class="dot"></i></h2>
         </div>
         <!--进度条-->
         <div class="cont">
@@ -42,16 +42,20 @@
         // 下载
         var i = 0;
         var ms = 6000;
-
+        let j = 0;
+        let $dot = document.getElementsByClassName("dot")[0];
         var time = setInterval(function() {
             $(".load").css("width", i + "%");
-            i = i + (1000 / ms);
+            // i = i + (1000 / ms);
+            i++;
             $(".ing").text(Math.round(i) + "%");
-            // for (let j = 1; j <= 3; j++) {
-            //     if (j = 1) {
-            //         $(".dot").text("正在下载号码识别基础数据包" + ".")
-            //     }
-            // }
+            j++;
+            if (j > 3) {
+                $dot.innerHTML = '';
+                j = 0;
+            } else {
+                $dot.innerHTML += $dot.innerHTML = '.';
+            }
             if (i > 100) {
                 $(".ing").text("100%");
                 setTimeout(function() {
@@ -59,7 +63,7 @@
                 }, 200);
                 clearInterval(time);
             }
-        }, 10);
+        }, 200);
     </script>
 </body>
 
