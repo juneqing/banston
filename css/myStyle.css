@@ -34,14 +34,19 @@
 /*内容区*/
 
 .content {
-    width: 100%;
+    width: 90%;
     margin-bottom: 1.736rem;
+    margin: 0 auto;
 }
 
 .content .img {
     padding: 2.6087rem 0rem;
     width: 90%;
     margin: 0 auto;
+}
+
+.img img {
+    width: 100%;
 }
 
 

@@ -15,7 +15,7 @@
     <div class="navbar">
         <div class="nav">
             <div class="back">
-                <img src="img/back.png" alt="" class="img-responsive">
+                <img src="img/back.png" alt="">
             </div>
             <h3>号码识别设置</h3>
         </div>
@@ -40,11 +40,11 @@
     <script type="text/javascript" src="js/init.js"></script>
     <script type="text/javascript">
         // 下载
-        var i = 0;
-        var ms = 6000;
+        let i = 0;
+        let ms = 6000;
         let j = 0;
         let $dot = document.getElementsByClassName("dot")[0];
-        var time = setInterval(function() {
+        let time = setInterval(function() {
             $(".load").css("width", i + "%");
             // i = i + (1000 / ms);
             i++;
@@ -59,7 +59,7 @@
             if (i > 100) {
                 $(".ing").text("100%");
                 setTimeout(function() {
-                    window.location.href = "index2.html"
+                    // window.location.href = "index2.html"
                 }, 200);
                 clearInterval(time);
             }
